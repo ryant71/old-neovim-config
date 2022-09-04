@@ -32,19 +32,32 @@ cmp.setup({
 			-- vim.fn["UltiSnips#Anon"](args.body)
 		end,
 	},
-	mapping = cmp.mapping.preset.insert({
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
-		["<C-u>"] = cmp.mapping.scroll_docs(-4),
-		["<C-d>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(),
-	}),
+	--mapping = cmp.mapping.preset.insert({
+    --    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+	--	["<C-u>"] = cmp.mapping.scroll_docs(-4),
+	--	["<C-d>"] = cmp.mapping.scroll_docs(4),
+	--	["<C-Space>"] = cmp.mapping.complete(),
+	--}),
 
+    mapping = {
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true
+        }),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        ["<Tab>"] = cmp.mapping.select_next_item(),
+    },
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.kind = lspkind.presets.default[vim_item.kind]
 			local menu = source_mapping[entry.source.name]
 			if entry.source.name == "cmp_tabnine" then
-				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+				if entry.completion_item.data ~= nil and
+                        entry.completion_item.data.detail ~= nil then
 					menu = entry.completion_item.data.detail .. " " .. menu
 				end
 				vim_item.kind = ""
@@ -53,8 +66,7 @@ cmp.setup({
 			return vim_item
 		end,
 	},
-
-	sources = {
+    sources = {
 		-- tabnine completion? yayaya
 
 		{ name = "cmp_tabnine" },

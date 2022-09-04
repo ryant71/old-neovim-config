@@ -1,9 +1,9 @@
-print("hello from set")
+print("hello from initasfuck/set")
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
-
+vim.opt.cursorline = true
 vim.opt.errorbells = false
 
 vim.opt.tabstop = 4
@@ -23,18 +23,21 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+vim.opt.completeopt=menuone,noinsert,noselect
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+
 -- Give more space for displaying messages.
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 2
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
 vim.opt.updatetime = 50
+
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
@@ -44,4 +47,4 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 
---vim.opt.listchars = {eol = '↲', tab = '▸ ', trail = '·'}
+vim.opt.listchars = {eol = '↲', tab = '▸ ', trail = '·'}
