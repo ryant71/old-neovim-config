@@ -1,6 +1,4 @@
 local nnoremap = require("initasfuck.keymap").nnoremap
-
--- does this make sense?
 local vnoremap = require("initasfuck.keymap").vnoremap
 
 nnoremap("<leader>nw", "<cmd>Ex<CR>")
@@ -19,3 +17,14 @@ nnoremap("C", "c$")
 -- move selected lines
 vnoremap("<C-j>", ":m '>+1<CR>gv=gv")
 vnoremap("<C-k>", ":m '<-2<CR>gv=gv")
+
+
+-- for nvim-tree
+--
+local map = vim.api.nvim_set_keymap
+
+-- remap the key used to leave insert mode
+map('i', 'jk', '', {})
+
+-- Toggle nvim-tree
+map('n', 'n', [[:NvimTreeToggle]], {})

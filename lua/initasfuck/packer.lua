@@ -8,13 +8,14 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use("sbdchd/neoformat")
 
-    -- Simple plugins can be specified as strings
     use("TimUntersberger/neogit")
 
     -- TJ created lodash of neovim
     use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
     use("nvim-telescope/telescope.nvim")
+
+    use("tpope/vim-surround")
 
     -- All the things
     use("neovim/nvim-lspconfig")
@@ -29,7 +30,6 @@ return require('packer').startup(function(use)
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
 
-  
     use({
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
@@ -37,9 +37,17 @@ return require('packer').startup(function(use)
         end,
         requires = { "nvim-lua/plenary.nvim" },
     })
-  
+    use {                                         -- filesystem navigation
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons' -- filesystem icons
+    }
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     -- colors
-    use 'folke/tokyonight.nvim'  
+    -- Simple plugins can be specified as strings
+    use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
-  
+
 end)

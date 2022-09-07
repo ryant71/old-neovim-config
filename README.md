@@ -24,6 +24,21 @@
         └── plugin
             └── packer_compiled.lua
 
+## TODO
+
+The Neovim version of this
+
+### Language Modes
+
+        " cloudformation
+        autocmd BufNewFile,BufRead *.template setfiletype yaml.cloudformation
+        autocmd BufNewFile,BufRead *.template.yaml setfiletype yaml.cloudformation
+
+### Miscellaneous
+
+* re-enter nvim at same line as previous session
+* ...
+
 ## Acknowledgements
 
 * [Your first vimrc - ThePrimeagen](https://www.youtube.com/watch?v=x2QJYq4IX6M)
