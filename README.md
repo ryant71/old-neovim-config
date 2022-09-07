@@ -24,15 +24,22 @@
         └── plugin
             └── packer_compiled.lua
 
+## null-ls
+
+For the options I've added, I installed the following:
+
+        brew install chktex     # LaTeX linter
+        brew install checkmake  # Makefile linter
+        brew install yamllint   # yaml linter
+        brew install hadolint   # Dockerfile linter
+
 ## TODO
 
 The Neovim version of this
 
 ### Language Modes
 
-        " cloudformation
-        autocmd BufNewFile,BufRead *.template setfiletype yaml.cloudformation
-        autocmd BufNewFile,BufRead *.template.yaml setfiletype yaml.cloudformation
+SaltStack, Jinja2
 
 ### Miscellaneous
 
