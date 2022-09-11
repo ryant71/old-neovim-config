@@ -27,4 +27,11 @@ local map = vim.api.nvim_set_keymap
 map('i', 'jk', '', {})
 
 -- Toggle nvim-tree
-map('n', 'n', [[:NvimTreeToggle]], {})
+map('n', 't', [[:NvimTreeToggle]], {})
+
+
+-- for mind
+--
+
+nnoremap("<leader>mom", [[:MindOpenMain<CR>]], {})
+nnoremap("<leader>mop", [[:MindOpenProject]], {})
