@@ -8,7 +8,10 @@
         │   └── plugin
         │       ├── colors.lua
         │       ├── lsp.lua
+        │       ├── lualine.lua
+        │       ├── mind.lua
         │       ├── null-ls.lua
+        │       ├── nvim-tree.lua
         │       └── tabnine.lua
         ├── init.lua
         ├── lsp_tabnine_stuff.txt

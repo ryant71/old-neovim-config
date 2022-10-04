@@ -1,5 +1,5 @@
 require("initasfuck.set")
 require("initasfuck.remap")
 require("initasfuck.packer")
-require("initasfuck.autocommands")
+--require("initasfuck.autocommands")
 require("initasfuck.vimscript")

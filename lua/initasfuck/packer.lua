@@ -63,5 +63,7 @@ return require('packer').startup(function(use)
     -- Simple plugins can be specified as strings
     use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
+    
+    use 'farmergreg/vim-lastplace'
 
 end)
