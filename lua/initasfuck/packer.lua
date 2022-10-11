@@ -7,19 +7,14 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use('wbthomason/packer.nvim')
     use('sbdchd/neoformat')
-
     use('TimUntersberger/neogit')
-
     -- TJ created lodash of neovim
     use('nvim-lua/plenary.nvim')
     use('nvim-lua/popup.nvim')
     use('nvim-telescope/telescope.nvim')
     use('sharkdp/fd')
     use('nvim-treesitter/nvim-treesitter')
-
-
     use('tpope/vim-surround')
-
     -- All the things
     use('neovim/nvim-lspconfig')
     use('hrsh7th/cmp-nvim-lsp')
@@ -32,7 +27,6 @@ return require('packer').startup(function(use)
     --use('simrat39/symbols-outline.nvim')
     use('L3MON4D3/LuaSnip')
     use('saadparwaiz1/cmp_luasnip')
-
     use({
         'jose-elias-alvarez/null-ls.nvim',
         config = function()
@@ -40,17 +34,15 @@ return require('packer').startup(function(use)
         end,
         requires = { 'nvim-lua/plenary.nvim' },
     })
-
     use {                                         -- filesystem navigation
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons' -- filesystem icons
     }
-
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-
+    -- cool note taking plugin
     use {
       'phaazon/mind.nvim',
       branch = 'v2.2',
@@ -63,7 +55,7 @@ return require('packer').startup(function(use)
     -- Simple plugins can be specified as strings
     use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
-    
+    -- I gave up on opening nvim in last cursor position
+    -- so I have resorted to a plugin
     use 'farmergreg/vim-lastplace'
-
 end)

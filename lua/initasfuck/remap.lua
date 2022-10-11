@@ -35,3 +35,7 @@ map('n', 't', [[:NvimTreeToggle]], {})
 nnoremap("<leader>mom", [[:MindOpenMain<CR>]], {})
 nnoremap("<leader>mop", [[:MindOpenProject]], {})
 
+nnoremap("<right>", ":bn<CR>")
+nnoremap("<left>", ":bp<CR>")
+nnoremap("<up>", "<C-w><C-w>")
+nnoremap("<down>", "")
